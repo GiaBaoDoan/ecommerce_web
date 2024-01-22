@@ -1,0 +1,44 @@
+.ntn-child-1 {
+    top : 20%;
+    left:25%;
+    background: #eb59d5;
+    box-shadow: 0 5px 15px #eb59d5;
+
+}
+.ntn-child-0 {
+    top : 25%;
+    left:60%;
+    background: #7256df;
+    box-shadow: 0 5px 15px #7256df;
+}
+.ntn-child-2 {
+    top : 65%;
+    left:33%;
+    background: #37d87b;;
+    box-shadow: 0 5px 15px #37d87b;;
+}
+.ntn-child-3 {
+    top : 20%;
+     right: 28%;
+     background: #fe7855;
+    box-shadow: 0 5px 15px #fe7855;
+}
+.ntn-child-4 {
+    top : 10%;
+    left:40%;
+    background: #ffc313;
+    box-shadow: 0 5px 15px #ffc313;
+}
+.ntn-child-5 {
+    top : 55%;
+    left:50%;
+    background: #ffc313;
+    box-shadow: 0 5px 15px #ffc313;
+}
+.ntn-child-6 {
+    top : 70%;
+    right: 25%;
+    background: #26aeea;
+    box-shadow: 0 5px 15px #26aeea;
+    
+}

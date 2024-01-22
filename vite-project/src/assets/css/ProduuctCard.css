@@ -1,0 +1,32 @@
+.ProductCard .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0%;
+    height:0%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s;
+    background-color: rgba(255, 255, 255, 0.6)
+    
+}
+.icons {
+    transition: all 0.4s;
+    opacity: 0;
+    
+
+}
+.ProductCard .icons {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.par:hover .overlay{
+    width: 100%;
+    height: 100%;
+}
+.par:hover .icons {
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%) translateY(-150px);
+}

@@ -1,0 +1,6 @@
+.Register form {
+    background-image: linear-gradient(to bottom,rgba(255,255,255,1),rgba(255,255,255,0.4),rgba(255,255,255,0.1));
+}
+.Register form input {
+    outline: none;
+}
