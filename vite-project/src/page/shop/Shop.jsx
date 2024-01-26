@@ -7,6 +7,7 @@ import Search from "./Search.jsx";
 import ShopCategory from "./ShopCategory.jsx";
 import PoppularPost from "./PoppularPost.jsx";
 import Tag from "./Tag.jsx";
+import "../../assets/css/Animation.css";
 const title = "Showing 01-12 of 139 results";
 const Shop = () => {
   const [gridList, setGridList] = useState(false);
@@ -36,7 +37,7 @@ const Shop = () => {
   };
   return (
     <div className="font-poppins">
-      <PageHeader title={"Shop Page"} curPage={"Shop"} />
+      <PageHeader title={"Home"} curPage={"Shop"} />
       {/* Shop Page section */}
       <div className="container mx-auto p-[100px]">
         <div className="flex gap-2 ">

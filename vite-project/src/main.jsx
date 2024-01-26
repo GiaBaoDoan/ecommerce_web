@@ -7,6 +7,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./page/home/Home.jsx";
 import Shop from "./page/shop/Shop.jsx";
 import Blog from "./page/Blog/Blog.jsx";
+import DetailProduct from "./page/Detail/DetailProduct.jsx";
+import CartPage from "./page/CartPage/CartPage.jsx";
+import SingleBlog from "./page/SingleBlog/SingleBlog.jsx";
+import About from "./page/About/About.jsx";
+import Contact from "./page/Contact/Contact.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +29,26 @@ const router = createBrowserRouter([
       {
         path: "/Blog",
         element: <Blog />,
+      },
+      {
+        path: "/shop/:id",
+        element: <DetailProduct />,
+      },
+      {
+        path: "/blog/:id",
+        element: <SingleBlog />,
+      },
+      {
+        path: "/cart-page",
+        element: <CartPage />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

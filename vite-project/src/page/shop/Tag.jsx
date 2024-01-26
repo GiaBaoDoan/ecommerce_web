@@ -47,7 +47,10 @@ const Tag = () => {
         <div className="text-center p-3 pb-4 space-y-2 mt-2">
           {tagsList.map((item, index) => {
             return (
-              <button className="bg-white text-sm mr-2 text-center rounded shadow hover:bg-[#ff5243] hover:text-white transition-all  p-2">
+              <button
+                key={index}
+                className="bg-white text-sm mr-2 text-center rounded shadow hover:bg-[#ff5243] hover:text-white transition-all  p-2"
+              >
                 {item.text}
               </button>
             );

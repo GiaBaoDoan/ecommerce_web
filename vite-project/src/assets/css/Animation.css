@@ -1,0 +1,13 @@
+@keyframes moveTo {
+   0% {opacity: 1;}
+   100% {scale: 1.6; opacity: 0;}
+
+
+
+
+}
+.blog .par .child1 {
+    animation-name: moveTo;
+    animation-duration: 1s ;
+    animation-iteration-count: infinite;
+}

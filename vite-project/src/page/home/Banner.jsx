@@ -98,7 +98,7 @@ const Banner = () => {
                 return (
                   <span
                     key={index}
-                    className="bg-white cursor-pointer shadow rounded border text-gray-500 font-medium p-2 mt-4 inline-block mx-1"
+                    className="bg-white  cursor-pointer shadow rounded border text-gray-500 font-medium p-2 mt-4 inline-block mx-1"
                   >
                     <Link to={`/shop/${prd.id}`} className="uppercase rounded">
                       {prd.name}
