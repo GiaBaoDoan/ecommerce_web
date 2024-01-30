@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PageHeader from "../../components/PageHeader.jsx";
 import Data from "../../data/data.json";
 import ProductsCard from "../../components/ProductsCard.jsx";
@@ -10,6 +10,7 @@ import Tag from "./Tag.jsx";
 import "../../assets/css/Animation.css";
 const title = "Showing 01-12 of 139 results";
 const Shop = () => {
+  const [translate, setTranslate] = useState(false);
   const [gridList, setGridList] = useState(false);
   const [products, setProducts] = useState(Data);
   const [currentPage, setCurrent] = useState(1);
@@ -35,6 +36,9 @@ const Shop = () => {
     setSelectedCategory(curCate);
     setProducts(newItem);
   };
+  useEffect(() => {
+    setTranslate(true);
+  }, []);
   return (
     <div className="font-poppins">
       <PageHeader title={"Home"} curPage={"Shop"} />
@@ -47,7 +51,13 @@ const Shop = () => {
               <p>{title}</p>
               <div className="flex space-x-2">
                 <svg
-                  onClick={() => setGridList(true)}
+                  onClick={() => {
+                    setGridList(true);
+                    setTranslate(false);
+                    setTimeout(() => {
+                      setTranslate(true);
+                    }, 200);
+                  }}
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -66,7 +76,13 @@ const Shop = () => {
                   <rect width="7" height="7" x="3" y="14" rx="1" />
                 </svg>
                 <svg
-                  onClick={() => setGridList(false)}
+                  onClick={() => {
+                    setGridList(false);
+                    setTranslate(false);
+                    setTimeout(() => {
+                      setTranslate(true);
+                    }, 200);
+                  }}
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -89,7 +105,11 @@ const Shop = () => {
               </div>
             </div>
             {/* productCard */}
-            <ProductsCard gridList={gridList} products={ListProductToPage} />
+            <ProductsCard
+              translate={translate}
+              gridList={gridList}
+              products={ListProductToPage}
+            />
             <Pagination
               productsPerPage={productsPerPage}
               totalProducts={products.length}

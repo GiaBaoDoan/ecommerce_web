@@ -12,6 +12,9 @@ import CartPage from "./page/CartPage/CartPage.jsx";
 import SingleBlog from "./page/SingleBlog/SingleBlog.jsx";
 import About from "./page/About/About.jsx";
 import Contact from "./page/Contact/Contact.jsx";
+import Login from "./page/Login/Login.jsx";
+import Auth from "./page/auth/Auth.jsx";
+import Register from "./page/register/Register.jsx";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +52,20 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+    ],
+  },
+  {
+    path: "/",
+    element: <Auth />,
+    children: [
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/signup",
+        element: <Register />,
       },
     ],
   },

@@ -78,11 +78,13 @@ const NavItem = () => {
                 <div className="ml-[50px] space-x-7 flex items-center">
                   <div className="hover:-translate-y-1 transition-all">
                     <button className="bg-yellow-300  rounded p-3 font-bold">
-                      Create Account
+                      <Link to={"/signup"}> Create Account</Link>
                     </button>
                   </div>
                   <div>
-                    <button className="text-gray-500 text-xl">Log in</button>
+                    <button className="text-gray-500 text-xl">
+                      <Link to={"/login"}>Login</Link>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -193,11 +195,13 @@ const NavItem = () => {
               <div className="flex justify-between items-center">
                 <div className="hover:-translate-y-1 transition-all">
                   <button className="bg-yellow-300  rounded p-3 font-bold">
-                    Create Account
+                    <Link to={"/signup"}>Create Account</Link>
                   </button>
                 </div>
                 <div>
-                  <button className="text-gray-500 text-xl">Log in</button>
+                  <button className="text-gray-500 text-xl">
+                    <Link to={"/login"}>Log in</Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -240,11 +244,13 @@ const NavItem = () => {
                 <div className="ml-[50px] space-x-7 flex items-center">
                   <div className="hover:-translate-y-1 transition-all">
                     <button className="bg-yellow-300  rounded p-3 font-bold">
-                      Create Account
+                      <Link to={"/signup"}>Create Account</Link>
                     </button>
                   </div>
                   <div>
-                    <button className="text-gray-500 text-xl">Log in</button>
+                    <button className="text-gray-500 text-xl">
+                      <Link to={"/login"}>Log in</Link>
+                    </button>
                   </div>
                 </div>
               </div>

@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../assets/css/ProduuctCard.css";
 import Pagination from "./Pagination";
+// import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
 import { Link } from "react-router-dom";
-const ProductsCard = ({ gridList, products }) => {
+const ProductsCard = ({ gridList, products, translate }) => {
   return (
     <div className="mt-[20px] ProductCard">
-      <div className="grid grid-cols-3 gap-[50px]">
+      <div className={`grid ${gridList ? "" : "grid-cols-3"}    gap-[50px]`}>
         {products.map((item, index) => {
           return (
-            <div className="p-3 shadow bg-white">
+            <div className="p-3 shadow  bg-white">
               <div className="">
                 <div className="par cursor-pointer relative">
-                  <img className="" src={item.img} alt="" />
+                  <img
+                    className={`${translate ? "scale-100" : "scale-0"} ${
+                      gridList ? "w-full" : ""
+                    } transition-all duration-300 `}
+                    src={item.img}
+                    alt=""
+                  />
                   <div className="overlay"></div>
                   <div className="icons ">
                     <div className="flex space-x-3">

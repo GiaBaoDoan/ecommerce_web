@@ -17,6 +17,8 @@ import image2 from "../../images/instructor/02.jpg";
 import image3 from "../../images/instructor/03.jpg";
 import image4 from "../../images/instructor/04.jpg";
 import ReviewRating from "./ReviewRating";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
 let ReviewList = [
   {
     imgUrl: image1,
@@ -75,7 +77,6 @@ const DetailProduct = () => {
   };
   const { id } = useParams();
   const filterId = Data.filter((item) => item.id === id);
-
   return (
     <div className="font-poppins ">
       <PageHeader title={"Home"} curPage={"Shop / Single Product"} />
@@ -86,12 +87,16 @@ const DetailProduct = () => {
             {/* img and detail */}
             <div className="grid grid-cols-2 bg-white border-slate-100 border rounded shadow-md p-6 gap-x-5">
               <div>
-                <Swiper className="mySwiper">
+                <Swiper
+                  navigation={true}
+                  modules={[Navigation]}
+                  className="mySwiper"
+                >
                   {filterId.map((item, i) => {
                     return (
-                      <div>
+                      <SwiperSlide>
                         <img className="rounded" src={item.img} alt="" />
-                        <div className="top-1/2 py-5 cursor-pointer text-white bg-[#ff5243] absolute left-0">
+                        {/* <div className="top-1/2 py-5 cursor-pointer text-white bg-[#ff5243] absolute left-0">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="18"
@@ -122,8 +127,8 @@ const DetailProduct = () => {
                           >
                             <path d="m9 18 6-6-6-6" />
                           </svg>
-                        </div>
-                      </div>
+                        </div> */}
+                      </SwiperSlide>
                     );
                   })}
                 </Swiper>

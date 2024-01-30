@@ -76,7 +76,7 @@ const About = () => {
                         src={item.imgUrl}
                         alt=""
                       />
-                      <div className="space-y-1">
+                      <div className="space-y-5">
                         <span className="font-bold">{item.title}</span>
                         <p className="opacity-80">{item.desc}</p>
                       </div>
